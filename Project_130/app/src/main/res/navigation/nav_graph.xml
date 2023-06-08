@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.stopwach.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_TimerFragment"
+            app:destination="@id/TimerFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_StopwatchFragment"
+            app:destination="@id/StopwatchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/TimerFragment"
+        android:name="com.example.stopwach.TimerFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_timer">
+
+        <action
+            android:id="@+id/action_TimerFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/StopwatchFragment"
+        android:name="com.example.stopwach.StopwatchFragment"
+        android:label="@string/stopwatch"
+        tools:layout="@layout/fragment_stopwatch">
+
+        <action
+            android:id="@+id/action_StopwatchFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+</navigation>
